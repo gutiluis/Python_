@@ -10,7 +10,7 @@ def subtract(a, b):
     print(f"SUBTRACTING {a} - {b}")
     return a - b
 
-
+# try statement, raise error, 
 birth_year = int(input("Enter you birth year: "))
 current_year = int(input("Enter the current year: "))
 
