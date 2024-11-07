@@ -11,9 +11,11 @@ def subtract(a, b):
     return a - b
 
 # try statement, raise error, 
-birth_year = int(input("Enter you birth year: "))
-current_year = int(input("Enter the current year: "))
-
+while True:
+    try:
+        birth_year = int(input("Enter you birth year: "))
+        current_year = int(input("Enter the current year: "))
+    except ValueError
 
 print(f"{birth_year}, {current_year}")
 
