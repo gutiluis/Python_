@@ -15,7 +15,8 @@ while True:
     try:
         birth_year = int(input("Enter you birth year: "))
         current_year = int(input("Enter the current year: "))
-    except ValueError
+    except ValueError:
+        print("Enter a valid type")
 
 print(f"{birth_year}, {current_year}")
 
