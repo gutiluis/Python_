@@ -1,7 +1,8 @@
-def function():
+import pdb
+def calculate_age(birth_year, current_year):
+    return subtract(current_year, birth_year)
 
-#missing while, login, pdb 
-# calculate the birthday using other functions
+# Functions for adding and subtracting
 def add(a, b):
     print(f"ADDING {a} + {b}")
     return a + b
@@ -10,18 +11,28 @@ def subtract(a, b):
     print(f"SUBTRACTING {a} - {b}")
     return a - b
 
-# try statement, raise error, 
-while True:
-    try:
-        birth_year = int(input("Enter you birth year: "))
-        current_year = int(input("Enter the current year: "))
-    except ValueError:
-        print("Enter a valid type")
+# Main function
+def function():
+    while True:
+        try:
+            birth_year = int(input("Enter your birth year: "))
+            current_year = int(input("Enter the current year: "))
+            
+            # Check for valid input
+            if birth_year > current_year:
+                print("Birth year can't be greater than the current year. Please try again.")
+                continue
+            
+            break  # Exit the loop if valid input
+        except ValueError:
+            print("Invalid input! Please enter valid numbers.")
 
-print(f"{birth_year}, {current_year}")
+    
+    pdb.set_trace()
 
-
-oper = current_year - birth_year
-print("Result", oper)
+    # Calculate age using the subtract function
+    age = calculate_age(birth_year, current_year)
+    
+    print(f"Your age is: {age}")
 
 function()
